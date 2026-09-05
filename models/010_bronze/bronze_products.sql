@@ -1,2 +1,1 @@
-select * 
-from {{ ref('raw_products') }}
+select * from {{ ref("raw_products") }}
