@@ -7,7 +7,7 @@ vars:
   surrogate_key_treat_nulls_as_empty_strings: true
 model-paths: ["models"]
 seed-paths: ["seeds"]
-analysis-paths: ["analysis"]
+analysis-paths: ["analyses"]
 test-paths: ["tests"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
