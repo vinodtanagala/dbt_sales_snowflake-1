@@ -21,7 +21,7 @@ dbt_medallion_snowflake:
       role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
       database: SALES_QA
       warehouse: COMPUTE_WH
-      schema: PUBLIC
+      schema: BRONZE
       threads: 7
 
     prod:
