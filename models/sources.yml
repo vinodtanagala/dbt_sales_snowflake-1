@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('DBT_SOURCE_DATABASE', target.database) }}"
+    schema: RAW  # Change to BRONZE if seeds are loaded into BRONZE
+    tables:
+      - name: raw_customers
+      - name: raw_orders
+      - name: raw_products
+      - name: raw_orderitems
