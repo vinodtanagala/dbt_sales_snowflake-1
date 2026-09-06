@@ -1,6 +1,5 @@
 dbt_medallion_snowflake:
   target: dev
-
   outputs:
     dev:
       type: snowflake
@@ -10,9 +9,7 @@ dbt_medallion_snowflake:
       role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
       database: SALES_DEV
       warehouse: COMPUTE_WH
-      schema: PUBLIC
-      threads: 7
-
+      schema: BRONZE
     qa:
       type: snowflake
       account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
@@ -22,15 +19,3 @@ dbt_medallion_snowflake:
       database: SALES_QA
       warehouse: COMPUTE_WH
       schema: BRONZE
-      threads: 7
-
-    prod:
-      type: snowflake
-      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
-      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
-      database: SALES_PROD
-      warehouse: COMPUTE_WH
-      schema: PUBLIC
-      threads: 7
